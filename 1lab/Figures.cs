@@ -53,4 +53,22 @@ namespace _1lab
         }
     }
 
+    public class Ellipse : Rectangle
+    {
+        public override void Draw(Graphics g)
+        {
+            g.DrawEllipse(pen, x1, y1, w, h);
+        }
+    }
+
+    public class Triangle : Line
+    {
+        public override void Draw(Graphics g)
+        {
+            g.DrawLine(pen, x1, y2, x2, y2);
+            g.DrawLine(pen, x1, y2, (x1 + x2) / 2, y1);
+            g.DrawLine(pen, (x1 + x2) / 2, y1, x2, y2);
+        }
+
+    }
 }

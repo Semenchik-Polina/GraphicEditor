@@ -33,7 +33,9 @@
             this.buttonRectangle = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.buttonLine = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonTriangle = new System.Windows.Forms.Button();
+            this.buttonCircle = new System.Windows.Forms.Button();
+            this.buttonSquare = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,29 +50,31 @@
             this.buttonClear.TabStop = false;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
-    //        this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonEllipse
             // 
             this.buttonEllipse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonEllipse.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse.Location = new System.Drawing.Point(18, 406);
+            this.buttonEllipse.Location = new System.Drawing.Point(305, 470);
             this.buttonEllipse.Name = "buttonEllipse";
             this.buttonEllipse.Size = new System.Drawing.Size(118, 37);
             this.buttonEllipse.TabIndex = 2;
             this.buttonEllipse.Text = "Ellipse";
             this.buttonEllipse.UseVisualStyleBackColor = false;
+            this.buttonEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
             // 
             // buttonRectangle
             // 
             this.buttonRectangle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonRectangle.ForeColor = System.Drawing.Color.White;
-            this.buttonRectangle.Location = new System.Drawing.Point(161, 406);
+            this.buttonRectangle.Location = new System.Drawing.Point(161, 470);
             this.buttonRectangle.Name = "buttonRectangle";
             this.buttonRectangle.Size = new System.Drawing.Size(118, 37);
             this.buttonRectangle.TabIndex = 3;
             this.buttonRectangle.Text = "Rectangle";
             this.buttonRectangle.UseVisualStyleBackColor = false;
+            this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
             // 
             // pictureBox
             // 
@@ -86,7 +90,7 @@
             // 
             this.buttonLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonLine.ForeColor = System.Drawing.Color.White;
-            this.buttonLine.Location = new System.Drawing.Point(161, 470);
+            this.buttonLine.Location = new System.Drawing.Point(18, 406);
             this.buttonLine.Name = "buttonLine";
             this.buttonLine.Size = new System.Drawing.Size(118, 37);
             this.buttonLine.TabIndex = 5;
@@ -94,16 +98,41 @@
             this.buttonLine.UseVisualStyleBackColor = false;
             this.buttonLine.Click += new System.EventHandler(this.buttonLine_Click);
             // 
-            // button1
+            // buttonTriangle
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(18, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Line";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonTriangle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonTriangle.ForeColor = System.Drawing.Color.White;
+            this.buttonTriangle.Location = new System.Drawing.Point(18, 470);
+            this.buttonTriangle.Name = "buttonTriangle";
+            this.buttonTriangle.Size = new System.Drawing.Size(118, 37);
+            this.buttonTriangle.TabIndex = 6;
+            this.buttonTriangle.Text = "Triangle";
+            this.buttonTriangle.UseVisualStyleBackColor = false;
+            this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
+            // 
+            // buttonCircle
+            // 
+            this.buttonCircle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonCircle.ForeColor = System.Drawing.Color.White;
+            this.buttonCircle.Location = new System.Drawing.Point(305, 406);
+            this.buttonCircle.Name = "buttonCircle";
+            this.buttonCircle.Size = new System.Drawing.Size(118, 37);
+            this.buttonCircle.TabIndex = 7;
+            this.buttonCircle.Text = "Circle";
+            this.buttonCircle.UseVisualStyleBackColor = false;
+            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
+            // 
+            // buttonSquare
+            // 
+            this.buttonSquare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonSquare.ForeColor = System.Drawing.Color.White;
+            this.buttonSquare.Location = new System.Drawing.Point(161, 406);
+            this.buttonSquare.Name = "buttonSquare";
+            this.buttonSquare.Size = new System.Drawing.Size(118, 37);
+            this.buttonSquare.TabIndex = 8;
+            this.buttonSquare.Text = "Square";
+            this.buttonSquare.UseVisualStyleBackColor = false;
+            this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
             // 
             // FormMain
             // 
@@ -111,14 +140,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(881, 545);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSquare);
+            this.Controls.Add(this.buttonCircle);
+            this.Controls.Add(this.buttonTriangle);
             this.Controls.Add(this.buttonLine);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.buttonRectangle);
             this.Controls.Add(this.buttonEllipse);
             this.Controls.Add(this.buttonClear);
             this.Name = "FormMain";
-            this.Text = "Paint";
+            this.Text = "Almost paint";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -132,7 +163,9 @@
         private System.Windows.Forms.Button buttonRectangle;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button buttonLine;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonTriangle;
+        private System.Windows.Forms.Button buttonCircle;
+        private System.Windows.Forms.Button buttonSquare;
     }
 }
 
