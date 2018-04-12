@@ -1,0 +1,10 @@
+C:\all you need is\to study\ООП\1lab\1lab\1lab\bin\Debug\1lab.exe.config
+C:\all you need is\to study\ООП\1lab\1lab\1lab\bin\Debug\1lab.exe
+C:\all you need is\to study\ООП\1lab\1lab\1lab\bin\Debug\1lab.pdb
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\1lab.csprojResolveAssemblyReference.cache
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\_1lab.FormMain.resources
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\_1lab.Properties.Resources.resources
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\1lab.csproj.GenerateResource.Cache
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\1lab.csproj.CoreCompileInputs.cache
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\1lab.exe
+C:\all you need is\to study\ООП\1lab\1lab\1lab\obj\Debug\1lab.pdb
