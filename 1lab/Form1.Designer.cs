@@ -63,7 +63,7 @@
             this.buttonEllipse.TabIndex = 2;
             this.buttonEllipse.Text = "Ellipse";
             this.buttonEllipse.UseVisualStyleBackColor = false;
-      //      this.buttonEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
+            this.buttonEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
             // 
             // buttonRectangle
             // 
@@ -75,7 +75,7 @@
             this.buttonRectangle.TabIndex = 3;
             this.buttonRectangle.Text = "Rectangle";
             this.buttonRectangle.UseVisualStyleBackColor = false;
-    //        this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
+            this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
             // 
             // pictureBox
             // 
@@ -85,6 +85,8 @@
             this.pictureBox.Size = new System.Drawing.Size(850, 380);
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
+            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
+            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
             // buttonLine
             // 
@@ -96,7 +98,7 @@
             this.buttonLine.TabIndex = 5;
             this.buttonLine.Text = "Line";
             this.buttonLine.UseVisualStyleBackColor = false;
-         // this.buttonLine.Click += new System.EventHandler(this.buttonLine_Click);
+            this.buttonLine.Click += new System.EventHandler(this.buttonLine_Click);
             // 
             // buttonTriangle
             // 
@@ -108,7 +110,7 @@
             this.buttonTriangle.TabIndex = 6;
             this.buttonTriangle.Text = "Triangle";
             this.buttonTriangle.UseVisualStyleBackColor = false;
-     //       this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
+            this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
             // 
             // buttonCircle
             // 
@@ -120,7 +122,7 @@
             this.buttonCircle.TabIndex = 7;
             this.buttonCircle.Text = "Circle";
             this.buttonCircle.UseVisualStyleBackColor = false;
-       //     this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
+            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
             // 
             // buttonSquare
             // 
@@ -132,7 +134,7 @@
             this.buttonSquare.TabIndex = 8;
             this.buttonSquare.Text = "Square";
             this.buttonSquare.UseVisualStyleBackColor = false;
-         //   this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
+            this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
             // 
             // buttonAllFigures
             // 
@@ -163,7 +165,6 @@
             this.Controls.Add(this.buttonClear);
             this.Name = "FormMain";
             this.Text = "Almost paint";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 

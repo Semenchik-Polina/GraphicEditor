@@ -10,7 +10,7 @@ namespace _1lab
     public abstract class Figure
     {
         public int x1, y1, x2, y2;
-        protected Pen pen = new Pen(Color.White);
+        protected Pen pen = new Pen(Color.White, 2);
         public Figure(Pen pen, int x1, int y1, int x2,int y2)
         {
             this.pen = pen;
