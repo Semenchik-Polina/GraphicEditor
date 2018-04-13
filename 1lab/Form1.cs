@@ -15,12 +15,8 @@ namespace _1lab
         Graphics g;
         PictureBox pb;
         List<Figure> listOfFigures = new List<Figure>();
-  /*      ShapeList<Figure> listFigures;
+        Boolean drawing = false;
 
-        public class ShapeList<T>: List<T>
-            where T: Figure
-        { }
- */
         public FormMain()
         {
             InitializeComponent();
@@ -40,23 +36,38 @@ namespace _1lab
 
         private void pictureBox_MouseDown(object sender, MouseEventArgs e, Figure figure)
         {
-
+            drawing = true;
+            figure.x1 = e.X;
+            figure.y1 = e.Y;
         }
 
-        private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+        private void pictureBox_MouseUp(object sender, MouseEventArgs e, Figure figure)
         {
-
+            figure.x2 = e.X;
+            figure.y2 = e.Y;
         }
         
         private void buttonLine_Click(object sender, EventArgs e)
         {
             Line line = new Line();
-            Random random = new Random();
-            line.x1 = random.Next(1, pictureBox.Width);
-            line.x2 = random.Next(1, pictureBox.Width);
-            line.y1 = random.Next(1, pictureBox.Height);
-            line.y2 = random.Next(1, pictureBox.Height);
-            line.Draw(g);
+
+            if (checkBoxAutoDraw.Checked == true)
+            {
+                Random random = new Random();
+                line.x1 = random.Next(1, pictureBox.Width);
+                line.x2 = random.Next(1, pictureBox.Width);
+                line.y1 = random.Next(10, pictureBox.Height);
+                line.y2 = random.Next(10, pictureBox.Height);
+                line.Draw(g);
+            }else
+            {
+                if (drawing == true)
+                {
+                    line.Draw(g);
+                    drawing = false;
+                }
+            }
+                     
             listOfFigures.Add(line);
         }
 
@@ -64,9 +75,10 @@ namespace _1lab
         {
             Square square = new Square();
             Random random = new Random();
-            square.x1 = random.Next(1, pictureBox.Width-100);
-            square.y1 = random.Next(1, pictureBox.Width-100);
-            square.h = random.Next(20, pictureBox.Height-200);
+            square.x1 = random.Next(1, pictureBox.Width- 100);
+            square.y1 = random.Next(1, pictureBox.Width- 100);
+            square.x2 = random.Next(40, pictureBox.Width);
+            square.y2 = random.Next(40, pictureBox.Width);
             square.Draw(g);
             listOfFigures.Add(square);
         }
@@ -77,7 +89,8 @@ namespace _1lab
             Random random = new Random();
             circle.x1 = random.Next(1, pictureBox.Width - 100);
             circle.y1 = random.Next(1, pictureBox.Width - 100);
-            circle.h = random.Next(20, pictureBox.Height - 200);
+            circle.x2 = random.Next(40, pictureBox.Width);
+            circle.y2 = random.Next(40, pictureBox.Width);
             circle.Draw(g);
             listOfFigures.Add(circle);
         }
@@ -86,10 +99,10 @@ namespace _1lab
         {
             Ellipse ellipse = new Ellipse();
             Random random = new Random();
-            ellipse.x1 = random.Next(1, pictureBox.Width-100);
-            ellipse.w = random.Next(20, pictureBox.Width-200);
-            ellipse.y1 = random.Next(1, pictureBox.Height-100);
-            ellipse.h = random.Next(20, pictureBox.Height-200);
+            ellipse.x1 = random.Next(1, pictureBox.Width- 100);
+            ellipse.x2 = random.Next(40, pictureBox.Width);
+            ellipse.y1 = random.Next(1, pictureBox.Height- 100);
+            ellipse.y2 = random.Next(40, pictureBox.Width);
             ellipse.Draw(g);
             listOfFigures.Add(ellipse);
         }
@@ -99,9 +112,9 @@ namespace _1lab
             Rectangle rect = new Rectangle();
             Random random = new Random();
             rect.x1 = random.Next(1, pictureBox.Width - 100);
-            rect.w = random.Next(20, pictureBox.Width - 200);
+            rect.x2 = random.Next(40, pictureBox.Width);
             rect.y1 = random.Next(1, pictureBox.Height - 100);
-            rect.h = random.Next(20, pictureBox.Height - 200);
+            rect.y2 = random.Next(40, pictureBox.Width);
             rect.Draw(g);
             listOfFigures.Add(rect);
         }
@@ -110,9 +123,9 @@ namespace _1lab
         {
             Triangle triang = new Triangle();
             Random random = new Random();
-            triang.x1 = random.Next(1, pictureBox.Width);
+            triang.x1 = random.Next(1, pictureBox.Width-100);
             triang.x2 = random.Next(40, pictureBox.Width);
-            triang.y1 = random.Next(1, pictureBox.Height);
+            triang.y1 = random.Next(1, pictureBox.Height-100);
             triang.y2 = random.Next(40, pictureBox.Height);
             triang.Draw(g);
             listOfFigures.Add(triang);

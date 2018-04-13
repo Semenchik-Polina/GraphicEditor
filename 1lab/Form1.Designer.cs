@@ -36,6 +36,7 @@
             this.buttonTriangle = new System.Windows.Forms.Button();
             this.buttonCircle = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
+            this.checkBoxAutoDraw = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             this.pictureBox.Size = new System.Drawing.Size(850, 376);
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
-            this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
+     //       this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
             // buttonLine
             // 
@@ -134,12 +135,23 @@
             this.buttonSquare.UseVisualStyleBackColor = false;
             this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
             // 
+            // checkBoxAutoDraw
+            // 
+            this.checkBoxAutoDraw.AutoSize = true;
+            this.checkBoxAutoDraw.Location = new System.Drawing.Point(459, 448);
+            this.checkBoxAutoDraw.Name = "checkBoxAutoDraw";
+            this.checkBoxAutoDraw.Size = new System.Drawing.Size(91, 21);
+            this.checkBoxAutoDraw.TabIndex = 9;
+            this.checkBoxAutoDraw.Text = "AutoDraw";
+            this.checkBoxAutoDraw.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(881, 545);
+            this.Controls.Add(this.checkBoxAutoDraw);
             this.Controls.Add(this.buttonSquare);
             this.Controls.Add(this.buttonCircle);
             this.Controls.Add(this.buttonTriangle);
@@ -153,6 +165,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -166,6 +179,7 @@
         private System.Windows.Forms.Button buttonTriangle;
         private System.Windows.Forms.Button buttonCircle;
         private System.Windows.Forms.Button buttonSquare;
+        private System.Windows.Forms.CheckBox checkBoxAutoDraw;
     }
 }
 

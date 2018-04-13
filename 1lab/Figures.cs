@@ -9,7 +9,7 @@ namespace _1lab
 {
     public abstract class Figure
     {
-        public int x1, y1;
+        public int x1, y1, x2, y2;
         protected Pen pen = new Pen(Color.White);
         public abstract void Draw(Graphics g);
         ~Figure()
@@ -20,7 +20,6 @@ namespace _1lab
 
     public class Line : Figure
     {
-        public int x2, y2;
         public override void Draw(Graphics g)
         {
             g.DrawLine(pen, x1, y1, x2, y2);
@@ -29,7 +28,7 @@ namespace _1lab
 
     public class Square : Figure
     {
-        public int h;
+        protected int h { get { return Math.Abs(y2 - y1); } set { } }
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(pen, x1, y1, h, h);
@@ -46,7 +45,7 @@ namespace _1lab
 
     public class Rectangle : Square
     {
-        public int w;
+        public int w { get { return Math.Abs(x2 - x1); } set { } }
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(pen, x1, y1, w, h);
@@ -61,7 +60,7 @@ namespace _1lab
         }
     }
 
-    public class Triangle : Line
+    public class Triangle : Figure
     {
         public override void Draw(Graphics g)
         {
