@@ -36,7 +36,7 @@
             this.buttonTriangle = new System.Windows.Forms.Button();
             this.buttonCircle = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
-            this.checkBoxAutoDraw = new System.Windows.Forms.CheckBox();
+            this.buttonAllFigures = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             this.buttonEllipse.TabIndex = 2;
             this.buttonEllipse.Text = "Ellipse";
             this.buttonEllipse.UseVisualStyleBackColor = false;
-            this.buttonEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
+      //      this.buttonEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
             // 
             // buttonRectangle
             // 
@@ -75,17 +75,16 @@
             this.buttonRectangle.TabIndex = 3;
             this.buttonRectangle.Text = "Rectangle";
             this.buttonRectangle.UseVisualStyleBackColor = false;
-            this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
+    //        this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
             // 
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox.Location = new System.Drawing.Point(18, 12);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(850, 376);
+            this.pictureBox.Size = new System.Drawing.Size(850, 380);
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
-     //       this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
             // buttonLine
             // 
@@ -97,7 +96,7 @@
             this.buttonLine.TabIndex = 5;
             this.buttonLine.Text = "Line";
             this.buttonLine.UseVisualStyleBackColor = false;
-            this.buttonLine.Click += new System.EventHandler(this.buttonLine_Click);
+         // this.buttonLine.Click += new System.EventHandler(this.buttonLine_Click);
             // 
             // buttonTriangle
             // 
@@ -109,7 +108,7 @@
             this.buttonTriangle.TabIndex = 6;
             this.buttonTriangle.Text = "Triangle";
             this.buttonTriangle.UseVisualStyleBackColor = false;
-            this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
+     //       this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
             // 
             // buttonCircle
             // 
@@ -121,7 +120,7 @@
             this.buttonCircle.TabIndex = 7;
             this.buttonCircle.Text = "Circle";
             this.buttonCircle.UseVisualStyleBackColor = false;
-            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
+       //     this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
             // 
             // buttonSquare
             // 
@@ -133,17 +132,19 @@
             this.buttonSquare.TabIndex = 8;
             this.buttonSquare.Text = "Square";
             this.buttonSquare.UseVisualStyleBackColor = false;
-            this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
+         //   this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
             // 
-            // checkBoxAutoDraw
+            // buttonAllFigures
             // 
-            this.checkBoxAutoDraw.AutoSize = true;
-            this.checkBoxAutoDraw.Location = new System.Drawing.Point(459, 448);
-            this.checkBoxAutoDraw.Name = "checkBoxAutoDraw";
-            this.checkBoxAutoDraw.Size = new System.Drawing.Size(91, 21);
-            this.checkBoxAutoDraw.TabIndex = 9;
-            this.checkBoxAutoDraw.Text = "AutoDraw";
-            this.checkBoxAutoDraw.UseVisualStyleBackColor = true;
+            this.buttonAllFigures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonAllFigures.ForeColor = System.Drawing.Color.White;
+            this.buttonAllFigures.Location = new System.Drawing.Point(524, 437);
+            this.buttonAllFigures.Name = "buttonAllFigures";
+            this.buttonAllFigures.Size = new System.Drawing.Size(118, 37);
+            this.buttonAllFigures.TabIndex = 9;
+            this.buttonAllFigures.Text = "Draw all figures";
+            this.buttonAllFigures.UseVisualStyleBackColor = false;
+            this.buttonAllFigures.Click += new System.EventHandler(this.buttonAllFigures_Click);
             // 
             // FormMain
             // 
@@ -151,7 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(881, 545);
-            this.Controls.Add(this.checkBoxAutoDraw);
+            this.Controls.Add(this.buttonAllFigures);
             this.Controls.Add(this.buttonSquare);
             this.Controls.Add(this.buttonCircle);
             this.Controls.Add(this.buttonTriangle);
@@ -165,7 +166,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -179,7 +179,7 @@
         private System.Windows.Forms.Button buttonTriangle;
         private System.Windows.Forms.Button buttonCircle;
         private System.Windows.Forms.Button buttonSquare;
-        private System.Windows.Forms.CheckBox checkBoxAutoDraw;
+        private System.Windows.Forms.Button buttonAllFigures;
     }
 }
 

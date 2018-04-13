@@ -11,6 +11,14 @@ namespace _1lab
     {
         public int x1, y1, x2, y2;
         protected Pen pen = new Pen(Color.White);
+        public Figure(Pen pen, int x1, int y1, int x2,int y2)
+        {
+            this.pen = pen;
+            this.x1 = x1;
+            this.x2 = x2;
+            this.y1 = y1;
+            this.y2 = y2;
+        }
         public abstract void Draw(Graphics g);
         ~Figure()
         {
@@ -20,6 +28,7 @@ namespace _1lab
 
     public class Line : Figure
     {
+        public Line(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
         public override void Draw(Graphics g)
         {
             g.DrawLine(pen, x1, y1, x2, y2);
@@ -28,7 +37,8 @@ namespace _1lab
 
     public class Square : Figure
     {
-        protected int h { get { return Math.Abs(y2 - y1); } set { } }
+        public Square(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
+        protected int h { get { return (y2 - y1); } set { } }
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(pen, x1, y1, h, h);
@@ -37,6 +47,7 @@ namespace _1lab
 
     public class Circle : Square
     {
+        public Circle(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
         public override void Draw(Graphics g)
         {
             g.DrawEllipse(pen, x1, y1, h, h);
@@ -45,7 +56,8 @@ namespace _1lab
 
     public class Rectangle : Square
     {
-        public int w { get { return Math.Abs(x2 - x1); } set { } }
+        public Rectangle(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
+        public int w { get { return (x2 - x1); } set { } }
         public override void Draw(Graphics g)
         {
             g.DrawRectangle(pen, x1, y1, w, h);
@@ -54,6 +66,7 @@ namespace _1lab
 
     public class Ellipse : Rectangle
     {
+        public Ellipse(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
         public override void Draw(Graphics g)
         {
             g.DrawEllipse(pen, x1, y1, w, h);
@@ -62,6 +75,7 @@ namespace _1lab
 
     public class Triangle : Figure
     {
+        public Triangle(Pen pen, int x1, int y1, int x2, int y2) : base(pen, x1, y1, x2, y2) { }
         public override void Draw(Graphics g)
         {
             g.DrawLine(pen, x1, y2, x2, y2);
