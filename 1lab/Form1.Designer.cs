@@ -37,6 +37,7 @@
             this.buttonCircle = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
             this.buttonAllFigures = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(750, 486);
+            this.buttonClear.Location = new System.Drawing.Point(750, 465);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(119, 47);
             this.buttonClear.TabIndex = 0;
@@ -85,6 +86,7 @@
             this.pictureBox.Size = new System.Drawing.Size(850, 380);
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
+            this.pictureBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDoubleClick);
             this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
@@ -148,12 +150,26 @@
             this.buttonAllFigures.UseVisualStyleBackColor = false;
             this.buttonAllFigures.Click += new System.EventHandler(this.buttonAllFigures_Click);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonCancel.ForeColor = System.Drawing.Color.White;
+            this.buttonCancel.Location = new System.Drawing.Point(750, 406);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(119, 47);
+            this.buttonCancel.TabIndex = 10;
+            this.buttonCancel.TabStop = false;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(881, 545);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonAllFigures);
             this.Controls.Add(this.buttonSquare);
             this.Controls.Add(this.buttonCircle);
@@ -181,6 +197,7 @@
         private System.Windows.Forms.Button buttonCircle;
         private System.Windows.Forms.Button buttonSquare;
         private System.Windows.Forms.Button buttonAllFigures;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
 
