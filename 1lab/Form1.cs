@@ -29,7 +29,7 @@ namespace _1lab
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-       //       g.Clear(pictureBox.BackColor);
+              g.Clear(pictureBox.BackColor);
               listOfFigures.Clear();            
         }
 
@@ -40,9 +40,6 @@ namespace _1lab
             {
 
             }
-
-            int x, y;
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -73,16 +70,7 @@ namespace _1lab
             
             listOfFigures.Add(curFigure);
         }
-             
-        private void GetRandomPosition (object sender, Figure figure)
-        {
-            Random random = new Random();
-            figure.x1 = random.Next(1, pictureBox.Width);
-            figure.y1 = random.Next(1, pictureBox.Height);
-            figure.x2 = random.Next(20, pictureBox.Width-20);
-            figure.y2 = random.Next(20, pictureBox.Height-20);
-        }
-
+    
         private void buttonLine_Click(object sender, EventArgs e)
         {
             curFigure = new Line(pen, x1,y1,x2,y2);
@@ -113,12 +101,6 @@ namespace _1lab
         {
             curFigure = new Triangle(pen, x1, y1, x2, y2);
         }
- 
-        ~FormMain()
-        {
-            g.Dispose();
-            pen.Dispose();
-        }
 
         private void buttonAllFigures_Click(object sender, EventArgs e)
         {
@@ -132,6 +114,12 @@ namespace _1lab
             {
                 listOfFigures[i].Draw(g);
             }
+        }
+
+        ~FormMain()
+        {
+            g.Dispose();
+            pen.Dispose();
         }
     }
 }
